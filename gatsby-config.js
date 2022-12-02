@@ -84,8 +84,6 @@ module.exports = {
     // },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
-    `gatsby-plugin-perf-budgets`,
-    `gatsby-plugin-webpack-bundle-analyser-v2`,
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -104,7 +102,7 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allWordpressPost } }) => {
-              return allWordpressPost.nodes.map(node => {
+              return allWordpressPost.nodes.map((node) => {
                 return Object.assign({}, node, {
                   description: node.excerpt,
                   date: node.date,
@@ -230,7 +228,7 @@ module.exports = {
             return acc
           }, {})
 
-          return allPages.map(page => {
+          return allPages.map((page) => {
             return { ...page, ...wordpressNodeMap[page.path] }
           })
         },
