@@ -15,7 +15,7 @@ module.exports = {
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        url: process.env.WPGRAPHQL_URL,
+        url: "https://reactgatsby.planful.com/graphql",
       },
     },
     "gatsby-plugin-sharp",
